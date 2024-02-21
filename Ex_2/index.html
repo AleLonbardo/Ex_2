@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor BRL para USD</title>
+</head>
+<body>
+    <h1>Conversor BRL para USD</h1>
+    <label for="inputBRL">Digite o valor em BRL:</label>
+    <input type="number" id="inputBRL">
+    <button onclick="converter()">Converter</button>
+    <p id="resultado"></p>
+
+    <script>
+        function converter() {
+            // Obter o valor em BRL do input
+            var valorBRL = parseFloat(document.getElementById("inputBRL").value);
+
+            // Definir a taxa de conversão
+            const taxaConversao = 0.193259;
+
+            // Calcular o valor em USD
+            var valorUSD = valorBRL * taxaConversao;
+
+            // Exibir o resultado na página
+            document.getElementById("resultado").innerHTML = "O valor em BRL é: " + valorBRL.toFixed(2) + " BRL<br>" +
+                                                               "O valor em USD é: " + valorUSD.toFixed(2) + " USD";
+        }
+    </script>
+</body>
+</html>
